@@ -20,7 +20,6 @@ export async function fetchRevenue() {
     // Don't do this in production :)
 
     console.log('Fetching revenue data...');
-    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
@@ -36,7 +35,6 @@ export async function fetchRevenue() {
 export async function fetchLatestInvoices() {
   noStore();
   console.log('Fetching revenue data...');
-  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   try {
     const data = await sql<LatestInvoiceRaw>`
